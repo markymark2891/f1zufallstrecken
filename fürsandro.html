@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formel 1 Strecke</title>
+	<style>
+		body {
+			font-size: 32px;
+			color: black;
+			background-color: white;
+			background-image: url('https://www.racefans.net/wp-content/uploads/2022/02/2021_1290x1280_10_cars_trimmed.jpg');
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		button {
+			font-size: 32px;
+			padding: 20px;
+		}
+		p {
+			background-color: white;
+			padding: 20px;
+		}
+		.result {
+			background-color: white;
+			padding: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<p>Was fahren wir als nächstes?</p>
+	<button onclick="selectTrack()">Klick hier</button>
+	<div class="result"></div>
+	<script>
+		const tracks = [
+			"Bahrain International Circuit (Bahrain)",
+			"Jeddah Corniche Circuit (Saudi-Arabien)",
+			"Albert Park (Australien)",
+			"Autodromo Internazionale Enzo e Dino Ferrari (Italien)",
+			"Miami International Autodrome (USA)",
+			"Circuit de Barcelona-Catalunya (Spanien)",
+			"Circuit de Monaco (Monaco)",
+			"Baku City Circuit (Aserbaidschan)",
+			"Circuit Gilles Villeneuve (Kanada)",
+			"Silverstone Circuit (Großbritannien)",
+			"Red Bull Ring (Österreich)",
+			"Circuit Paul Ricard (Frankreich)",
+			"Hungaroring (Ungarn)",
+			"Circuit de Spa-Francorchamps (Belgien)",
+			"Circuit Zandvoort (Niederlande)",
+			"Monza Circuit (Italien)",
+			"Marina Bay Street Circuit (Singapur)",
+			"Suzuka International Racing Course (Japan)",
+			"Circuit of the Americas (USA)",
+			"Autodromo Hermanos Rodriguez (Mexiko)",
+			"Interlagos Circuit (Brasilien)",
+			"Yas Marina Circuit (Vereinigte Arabische Emirate)",
+			"Shanghai International Circuit (China)",
+			"Autódromo Internacional do Algarve (Portugal)"
+		];
+
+	
+		function selectTrack() {
+			const track = tracks[Math.floor(Math.random() * tracks.length)];
+			const resultElement = document.querySelector('.result');
+			resultElement.textContent = track;
+		}
+	</script>
+</body>
+</html>
